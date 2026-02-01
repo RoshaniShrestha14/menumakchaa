@@ -1,19 +1,21 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/logo.jpg";
 
 const Header: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navLinks = [
     { name: "Home", to: "/" },
     { name: "About", to: "/about" },
     { name: "Services", to: "/services" },
     { name: "Contact", to: "/contact" },
-    
   ];
+
+  const activeTab =
+    navLinks.find((link) => link.to === location.pathname)?.name ?? "Home";
 
   return (
     <header className="header">
@@ -27,8 +29,9 @@ const Header: React.FC = () => {
             <Link
               key={link.name}
               to={link.to}
-              className={`nav-link ${activeTab === link.name ? "active" : ""}`}
-              onClick={() => setActiveTab(link.name)}
+              className={`nav-link ${
+                activeTab === link.name ? "active" : ""
+              }`}
             >
               {link.name}
             </Link>
@@ -36,8 +39,12 @@ const Header: React.FC = () => {
         </nav>
 
         <div className="auth-buttons">
-          <button className="btn register-btn">Register</button>
-          <button className="btn login-btn">Login</button>
+          <button type="button" className="btn register-btn">
+            Register
+          </button>
+          <button type="button" className="btn login-btn">
+            Login
+          </button>
         </div>
 
         <div
@@ -53,19 +60,22 @@ const Header: React.FC = () => {
           <Link
             key={link.name}
             to={link.to}
-            className={`nav-link ${activeTab === link.name ? "active" : ""}`}
-            onClick={() => {
-              setActiveTab(link.name);
-              setMenuOpen(false);
-            }}
+            className={`nav-link ${
+              activeTab === link.name ? "active" : ""
+            }`}
+            onClick={() => setMenuOpen(false)}
           >
             {link.name}
           </Link>
         ))}
 
         <div className="auth-mobile">
-          <button className="btn register-btn">Register</button>
-          <button className="btn login-btn">Login</button>
+          <button type="button" className="btn register-btn">
+            Register
+          </button>
+          <button type="button" className="btn login-btn">
+            Login
+          </button>
         </div>
       </div>
     </header>
