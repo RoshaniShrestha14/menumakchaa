@@ -1,4 +1,3 @@
-import React from 'react'
 import Contact_Form from '../components/ContactPage/Contact_Form'
 
 function Contact() {

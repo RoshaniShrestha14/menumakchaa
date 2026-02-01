@@ -1,7 +1,6 @@
 import React from "react";
 import "./Service.css";
 import Gifs from "../ui/Gifs";
-import Blob from "../ui/Blob";
 
 const services = [
   {
