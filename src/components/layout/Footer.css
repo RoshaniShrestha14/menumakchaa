@@ -1,0 +1,149 @@
+.footer {
+  background: #ffffff;
+  padding: 80px 0 40px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1.6fr 1.2fr 0.8fr 1fr;
+  gap: 60px;
+}
+
+/* BRAND */
+.footer-logo {
+  height: 48px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #6b7280;
+  max-width: 360px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: #f1f4fd;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b1d51;
+  cursor: pointer;
+}
+
+/* CONTACT */
+.footer-contact h4,
+.footer-pages h4,
+.footer-app h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b1d51;
+  margin-bottom: 28px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.contact-icon {
+  width: 46px;
+  height: 46px;
+  background: #f1f4fd;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b1d51;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: 15px;
+  color: #0b1d51;
+}
+
+.contact-item span {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* PAGES */
+.footer-pages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-pages li {
+  margin-bottom: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+/* APP */
+.footer-app {
+  text-align: center;
+}
+
+.qr {
+  width: 130px;
+  margin-bottom: 24px;
+}
+
+.store-btn {
+  width: 100%;
+  background: #0b1d51;
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.store-btn small {
+  font-size: 10px;
+  opacity: 0.8;
+  display: block;
+}
+
+.store-btn span {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-app {
+    text-align: left;
+  }
+}
