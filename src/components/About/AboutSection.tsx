@@ -22,14 +22,14 @@ const AboutSection = () => {
 
         {/* RIGHT IMAGES */}
         <div className="about-images">
-          <div className="image-main">
+          <div className="about-image-main">
             <img
               src="https://menumakchha.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout1.320e2fa8.jpeg&w=3840&q=75"
               alt="Food"
             />
           </div>
 
-          <div className="image-secondary">
+          <div className="about-image-secondary">
             <img
               src="https://menumakchha.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout2.ee397ddc.jpeg&w=3840&q=75"
               alt="QR Menu"

@@ -39,12 +39,12 @@ const Header: React.FC = () => {
         </nav>
 
         <div className="auth-buttons">
-          <button type="button" className="btn register-btn">
+          <Link to="/register" className="btn register-btn">
             Register
-          </button>
-          <button type="button" className="btn login-btn">
+          </Link>
+          <Link to="/login" className="btn login-btn">
             Login
-          </button>
+          </Link>
         </div>
 
         <div
@@ -70,12 +70,12 @@ const Header: React.FC = () => {
         ))}
 
         <div className="auth-mobile">
-          <button type="button" className="btn register-btn">
+          <Link to="/register" className="btn register-btn">
             Register
-          </button>
-          <button type="button" className="btn login-btn">
+          </Link>
+          <Link to="/login" className="btn login-btn">
             Login
-          </button>
+          </Link>
         </div>
       </div>
     </header>

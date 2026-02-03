@@ -1,8 +1,10 @@
-/* SECTION */
+
 .services-section {
   background: #fbfaf6;
-  padding: 6rem 6%;
+  padding: 4.5rem 6% 6rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .services-header h2 {
@@ -14,10 +16,76 @@
 
 .services-header p {
   max-width: 42rem;
-  margin: 0 auto 4rem;
+  margin: 0 auto 2.5rem;
   color: #64748b;
   font-size: 1.05rem;
   line-height: 1.6;
+}
+
+.services-header,
+.services-grid {
+  position: relative;
+  z-index: 1;
+}
+
+/* Blob decorations */
+.services-blob-decoration {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.services-blob-top-left {
+  position: absolute;
+  top: -140px;
+  left: -120px;
+  opacity: 0.45;
+  animation: services-blob-float 10s ease-in-out infinite;
+}
+
+.services-blob-top-right {
+  position: absolute;
+  top: 20px;
+  right: -110px;
+  opacity: 0.4;
+  animation: services-blob-float-reverse 12s ease-in-out infinite;
+}
+
+.services-blob-bottom-left {
+  position: absolute;
+  bottom: -160px;
+  left: -140px;
+  opacity: 0.38;
+  animation: services-blob-float 14s ease-in-out infinite;
+}
+
+.services-blob-bottom-right {
+  position: absolute;
+  bottom: 60px;
+  right: -120px;
+  opacity: 0.42;
+  animation: services-blob-float-reverse 11s ease-in-out infinite;
+}
+
+@keyframes services-blob-float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(22px, -18px) scale(1.05);
+  }
+}
+
+@keyframes services-blob-float-reverse {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(1.06);
+  }
 }
 
 
@@ -25,6 +93,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
+  margin-top: 0.5rem;
 }
 
 
@@ -68,10 +137,34 @@
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .services-blob-top-left,
+  .services-blob-top-right,
+  .services-blob-bottom-left,
+  .services-blob-bottom-right {
+    opacity: 0.32;
+  }
 }
 
 @media (max-width: 640px) {
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .services-blob-top-right,
+  .services-blob-bottom-right {
+    display: none;
+  }
+
+  .services-blob-top-left {
+    top: -90px;
+    left: -70px;
+    opacity: 0.28;
+  }
+
+  .services-blob-bottom-left {
+    bottom: -120px;
+    left: -90px;
+    opacity: 0.26;
   }
 }

@@ -21,7 +21,7 @@
   font-size: 64px;
   line-height: 1.15;
   font-weight: 900;
-  color: #081e66;
+  color: #072069;
   margin-bottom: 24px;
 }
 
@@ -55,20 +55,20 @@
   animation: float 4s ease-in-out infinite;
 }
 
-.image-main {
+.about-image-main {
   background: #ebf5f1;
   padding: 14px;
   border-radius: 28px;
 }
 
-.image-main img {
+.about-image-main img {
   width: 360px;
   height: 240px;
   object-fit: cover;
   border-radius: 22px;
 }
 
-.image-secondary {
+.about-image-secondary {
   position: absolute;
   right: -70px;
   bottom: -100px;
@@ -78,7 +78,7 @@
   animation: float 6s ease-in-out infinite;
 }
 
-.image-secondary img {
+.about-image-secondary img {
   width: 260px;
   height: 180px;
   object-fit: cover;
@@ -121,17 +121,17 @@
     justify-content: center;
   }
 
-  .image-main img {
+  .about-image-main img {
     width: 300px;
     height: 200px;
   }
 
-  .image-secondary {
+  .about-image-secondary {
     right: -20px;
     bottom: -40px;
   }
 
-  .image-secondary img {
+  .about-image-secondary img {
     width: 220px;
     height: 150px;
   }
@@ -158,17 +158,17 @@
     font-size: 14px;
   }
 
-  .image-main img {
+  .about-image-main img {
     width: 240px;
     height: 160px;
   }
 
-  .image-secondary {
+  .about-image-secondary {
     right: -10px;
     bottom: -20px;
   }
 
-  .image-secondary img {
+  .about-image-secondary img {
     width: 180px;
     height: 120px;
   }

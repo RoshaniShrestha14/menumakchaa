@@ -1,6 +1,7 @@
 import React from "react";
 import "./Service.css";
 import Gifs from "../ui/Gifs";
+import Blob from "../ui/Blob";
 
 const services = [
   {
@@ -44,6 +45,20 @@ const services = [
 const ServicesSection: React.FC = () => {
   return (
     <section className="services-section">
+      <div className="services-blob-decoration">
+        <div className="services-blob-top-left">
+          <Blob color="#FFE3E3" width={320} height={320} hoverAnimate={false} />
+        </div>
+        <div className="services-blob-top-right">
+          <Blob color="#B8E2FF" width={280} height={280} hoverAnimate={false} />
+        </div>
+        <div className="services-blob-bottom-left">
+          <Blob color="#D4F1E8" width={360} height={360} hoverAnimate={false} />
+        </div>
+        <div className="services-blob-bottom-right">
+          <Blob color="#A6E2CF" width={300} height={300} hoverAnimate={false} />
+        </div>
+      </div>
       <div className="services-header">
         <h2>What We Do</h2>
         <p>
