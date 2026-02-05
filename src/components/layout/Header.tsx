@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   ];
 
   const activeTab =
-    navLinks.find((link) => link.to === location.pathname)?.name ?? "Home";
+    navLinks.find((link) => link.to === location.pathname)?.name ?? null;
 
   return (
     <header className="header">

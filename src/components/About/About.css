@@ -25,13 +25,13 @@
   margin-bottom: 24px;
 }
 
-.highlight {
+.about-heading .highlight {
   position: relative;
   color: #48c7b6;
   display: inline-block;
 }
 
-.underline {
+.about-heading .underline {
   position: absolute;
   left: 0;
   bottom: -10px;
