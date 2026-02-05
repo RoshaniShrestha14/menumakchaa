@@ -70,10 +70,18 @@ const Header: React.FC = () => {
         ))}
 
         <div className="auth-mobile">
-          <Link to="/register" className="btn register-btn">
+          <Link
+            to="/register"
+            className="btn register-btn"
+            onClick={() => setMenuOpen(false)}
+          >
             Register
           </Link>
-          <Link to="/login" className="btn login-btn">
+          <Link
+            to="/login"
+            className="btn login-btn"
+            onClick={() => setMenuOpen(false)}
+          >
             Login
           </Link>
         </div>

@@ -3,6 +3,7 @@ import "./Plans.css";
 import { plans } from "./plansData";
 import type { Plan } from "./plansData";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Plans: React.FC = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -94,9 +95,12 @@ const Plans: React.FC = () => {
                 ))}
               </ul>
 
-              <button className={plan.highlight ? "primary" : ""}>
+              <Link
+                to="/register"
+                className={`plan-btn ${plan.highlight ? "primary" : ""}`}
+              >
                 Get Started
-              </button>
+              </Link>
             </div>
           ))}
         </div>

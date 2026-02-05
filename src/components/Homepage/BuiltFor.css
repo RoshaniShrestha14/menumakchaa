@@ -264,4 +264,8 @@
     transform: none;
     margin-top: 2rem;
   }
+  .primary-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
 }
